@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Ashley Wave Trials E Viewer</title>
-  <link rel="stylesheet" href="style.css">
+<title>Ashley Wave Trials E Layout</title>
+<style>
+body{
+ background:black;
+ color:white;
+ text-align:center;
+ font-family:Arial;
+}
+
+canvas{
+ background:#111;
+ border:2px solid white;
+ margin-top:20px;
+}
+</style>
 </head>
 
 <body>
 
-<h1>Ashley Wave Trials E</h1>
-<button onclick="loadLevel()">View Level</button>
+<h1>Ashley Wave Trials E Layout Viewer</h1>
 
-<pre id="levelData"></pre>
+<canvas id="levelCanvas" width="2000" height="500"></canvas>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
