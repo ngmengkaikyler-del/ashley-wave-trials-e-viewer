@@ -1,17 +1,17 @@
 let level;
 let scrollX = 0;
-let speed = 2;
+const speed = 2;
 
 async function loadLevel(){
 
  const res = await fetch("level.json");
  level = await res.json();
 
- requestAnimationFrame(draw);
+ requestAnimationFrame(update);
 
 }
 
-function draw(){
+function update(){
 
  const canvas = document.getElementById("levelCanvas");
  const ctx = canvas.getContext("2d");
@@ -20,7 +20,7 @@ function draw(){
 
  level.objects.forEach(o=>{
 
-  let x = o.x - scrollX;
+  const x = o.x - scrollX;
 
   if(o.type==="block"){
    ctx.fillStyle="white";
@@ -48,7 +48,7 @@ function draw(){
 
  scrollX += speed;
 
- requestAnimationFrame(draw);
+ requestAnimationFrame(update);
 
 }
 
